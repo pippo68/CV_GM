@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Demandes de Contact | G. Marchioro</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d39534;
+            --dark: #1a1a1c;
+            --card: rgba(255,255,255,0.07);
+            --border: rgba(211,149,52,0.25);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #0f0f10 0%, #1e1a12 100%);
+            color: #f5f2eb;
+            min-height: 100vh;
+        }
+
+        /* --- LOGIN SCREEN --- */
+        #login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .login-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 48px 40px;
+            max-width: 380px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(20px);
+        }
+        .login-card h1 { font-size: 1.6rem; color: var(--gold); margin-bottom: 8px; }
+        .login-card p { color: rgba(245,242,235,0.6); margin-bottom: 28px; font-size: 0.95rem; }
+        .login-card input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: #f5f2eb;
+            font-size: 1rem;
+            font-family: inherit;
+            margin-bottom: 16px;
+            outline: none;
+        }
+        .login-card input:focus { border-color: var(--gold); }
+        .btn-gold {
+            width: 100%;
+            padding: 14px;
+            background: var(--gold);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+        .btn-gold:hover { background: #e59e2b; transform: translateY(-1px); }
+        .login-error { color: #ff6b6b; font-size: 0.9rem; margin-top: 12px; display: none; }
+
+        /* --- ADMIN PANEL --- */
+        #admin-panel { display: none; }
+        .admin-header {
+            background: rgba(255,255,255,0.04);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .admin-header h1 { font-size: 1.4rem; color: var(--gold); }
+        .admin-header .meta { font-size: 0.85rem; color: rgba(245,242,235,0.5); }
+        .admin-actions { display: flex; gap: 12px; align-items: center; }
+        .btn-outline {
+            padding: 8px 18px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: transparent;
+            color: var(--gold);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        .btn-outline:hover { background: rgba(211,149,52,0.1); }
+        .btn-danger {
+            padding: 8px 18px;
+            border: 1px solid rgba(255,80,80,0.3);
+            border-radius: 8px;
+            background: transparent;
+            color: #ff6b6b;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        .btn-danger:hover { background: rgba(255,80,80,0.1); }
+
+        .admin-content { padding: 32px; max-width: 1200px; margin: 0 auto; }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-card .num { font-size: 2rem; font-weight: 700; color: var(--gold); }
+        .stat-card .label { font-size: 0.8rem; color: rgba(245,242,235,0.5); margin-top: 4px; }
+
+        .filter-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: rgba(245,242,235,0.7);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+        }
+
+        #submissions-list { display: grid; gap: 16px; }
+        .submission-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            transition: 0.2s;
+            position: relative;
+        }
+        .submission-card.is-new { border-left: 3px solid var(--gold); }
+        .submission-card:hover { background: rgba(255,255,255,0.1); }
+        .sub-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
+        .sub-id { font-size: 0.75rem; color: rgba(245,242,235,0.4); font-family: monospace; }
+        .sub-timestamp { font-size: 0.8rem; color: var(--gold); font-weight: 500; }
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; }
+        .badge-new { background: rgba(211,149,52,0.2); color: var(--gold); }
+        .badge-read { background: rgba(255,255,255,0.1); color: rgba(245,242,235,0.4); }
+        .sub-name { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
+        .sub-email a { color: var(--gold); font-size: 0.9rem; text-decoration: none; }
+        .sub-email a:hover { text-decoration: underline; }
+        .sub-subject { font-size: 0.95rem; color: rgba(245,242,235,0.7); margin: 10px 0 6px; font-style: italic; }
+        .sub-message { font-size: 0.9rem; color: rgba(245,242,235,0.6); line-height: 1.6; white-space: pre-wrap; }
+        .sub-docs { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .doc-tag { background: rgba(211,149,52,0.15); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; }
+        .sub-actions { display: flex; gap: 10px; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .btn-sm {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            cursor: pointer;
+            font-family: inherit;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: rgba(245,242,235,0.7);
+            transition: 0.2s;
+        }
+        .btn-sm:hover { background: rgba(255,255,255,0.08); }
+        .btn-sm-danger { border-color: rgba(255,80,80,0.3); color: #ff6b6b; }
+        .btn-sm-danger:hover { background: rgba(255,80,80,0.1); }
+        .btn-sm-reply { border-color: rgba(211,149,52,0.4); color: var(--gold); }
+        .btn-sm-reply:hover { background: rgba(211,149,52,0.1); }
+        .empty-state { text-align: center; padding: 80px 20px; color: rgba(245,242,235,0.3); }
+        .empty-state svg { opacity: 0.3; margin-bottom: 20px; }
+        .empty-state p { font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen">
+    <div class="login-card">
+        <h1>🔐 Admin Panel</h1>
+        <p>Accès sécurisé aux demandes de contact<br>reçues sur le site CV Marchioro</p>
+        <input type="password" id="admin-pwd" placeholder="Mot de passe admin" autocomplete="current-password">
+        <button class="btn-gold" onclick="doLogin()">Accéder →</button>
+        <div class="login-error" id="login-error">❌ Mot de passe incorrect</div>
+    </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+    <div class="admin-header">
+        <div>
+            <h1>📋 Demandes de Contact</h1>
+            <span class="meta">Site CV — Giampaolo Marchioro</span>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-outline" onclick="exportCSV()">⬇ Exporter CSV</button>
+            <button class="btn-outline" onclick="loadSubmissions()">↺ Actualiser</button>
+            <button class="btn-danger" onclick="doLogout()">Déconnexion</button>
+        </div>
+    </div>
+
+    <div class="admin-content">
+        <div class="stats-bar" id="stats-bar"></div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="setFilter('all', this)">Toutes</button>
+            <button class="filter-btn" onclick="setFilter('new', this)">Non lues</button>
+            <button class="filter-btn" onclick="setFilter('read', this)">Lues</button>
+        </div>
+
+        <div id="submissions-list"></div>
+    </div>
+</div>
+
+<script src="db.js"></script>
+<script>
+    // Admin password — change this to a secure value
+    const ADMIN_PASSWORD = 'Chef2024!GM';
+
+    let currentFilter = 'all';
+
+    function doLogin() {
+        const pwd = document.getElementById('admin-pwd').value;
+        if (pwd === ADMIN_PASSWORD) {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('admin-panel').style.display = 'block';
+            loadSubmissions();
+        } else {
+            document.getElementById('login-error').style.display = 'block';
+        }
+    }
+
+    document.getElementById('admin-pwd').addEventListener('keydown', e => {
+        if (e.key === 'Enter') doLogin();
+    });
+
+    function doLogout() {
+        document.getElementById('login-screen').style.display = 'flex';
+        document.getElementById('admin-panel').style.display = 'none';
+        document.getElementById('admin-pwd').value = '';
+    }
+
+    function setFilter(f, btn) {
+        currentFilter = f;
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderSubmissions(GM_DB.getAllSubmissions());
+    }
+
+    function loadSubmissions() {
+        const subs = GM_DB.getAllSubmissions();
+        renderStats(subs);
+        renderSubmissions(subs);
+    }
+
+    function renderStats(subs) {
+        const total = subs.length;
+        const unread = subs.filter(s => s.status === 'new').length;
+        const withDocs = subs.filter(s => s.documents && s.documents.length > 0).length;
+        const today = new Date().toLocaleDateString('it-IT');
+        const todayCount = subs.filter(s => s.date === today).length;
+
+        document.getElementById('stats-bar').innerHTML = `
+            <div class="stat-card"><div class="num">${total}</div><div class="label">Total demandes</div></div>
+            <div class="stat-card"><div class="num" style="color:#ff9f43">${unread}</div><div class="label">Non lues</div></div>
+            <div class="stat-card"><div class="num">${withDocs}</div><div class="label">Docs demandés</div></div>
+            <div class="stat-card"><div class="num">${todayCount}</div><div class="label">Aujourd'hui</div></div>
+        `;
+    }
+
+    function renderSubmissions(allSubs) {
+        const subs = allSubs.filter(s => currentFilter === 'all' || s.status === currentFilter);
+        const el = document.getElementById('submissions-list');
+
+        if (!subs.length) {
+            el.innerHTML = `<div class="empty-state">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <p>Aucune demande dans cette catégorie.</p>
+            </div>`;
+            return;
+        }
+
+        el.innerHTML = subs.map(s => `
+            <div class="submission-card ${s.status === 'new' ? 'is-new' : ''}" id="card-${s.id}">
+                <div class="sub-header">
+                    <div>
+                        <div class="sub-id">${s.id}</div>
+                        <div class="sub-name">${escHtml(s.name)}</div>
+                        <div class="sub-email"><a href="mailto:${s.email}">${s.email}</a></div>
+                    </div>
+                    <div style="text-align:right">
+                        <div class="sub-timestamp">📅 ${s.date} — ⏰ ${s.time}</div>
+                        <span class="badge ${s.status === 'new' ? 'badge-new' : 'badge-read'}">${s.status === 'new' ? '● Nouveau' : '✓ Lu'}</span>
+                        <div style="font-size:0.78rem; color:rgba(245,242,235,0.4); margin-top:4px">Langue: ${(s.lang||'fr').toUpperCase()}</div>
+                    </div>
+                </div>
+                <div class="sub-subject">📌 ${escHtml(s.subject)}</div>
+                <div class="sub-message">${escHtml(s.message)}</div>
+                ${s.documents && s.documents.length ? `
+                <div class="sub-docs">
+                    <span style="font-size:0.8rem;color:rgba(245,242,235,0.5);margin-right:4px">Documents:</span>
+                    ${s.documents.map(d => `<span class="doc-tag">📄 ${escHtml(d)}</span>`).join('')}
+                </div>` : ''}
+                <div class="sub-actions">
+                    <button class="btn-sm btn-sm-reply" onclick="replyTo('${s.email}','${escAttr(s.subject)}')">✉ Répondre</button>
+                    ${s.status === 'new' ? `<button class="btn-sm" onclick="markRead('${s.id}')">✓ Marquer lu</button>` : ''}
+                    <button class="btn-sm btn-sm-danger" onclick="deleteSub('${s.id}')">🗑 Supprimer</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function markRead(id) {
+        GM_DB.markAsRead(id);
+        loadSubmissions();
+    }
+
+    function deleteSub(id) {
+        if (confirm('Supprimer cette demande définitivement ?')) {
+            GM_DB.deleteSubmission(id);
+            loadSubmissions();
+        }
+    }
+
+    function replyTo(email, subject) {
+        window.location.href = `mailto:${email}?subject=Re: ${encodeURIComponent(subject)}&from=giampaolo@marchioro.org`;
+    }
+
+    function exportCSV() {
+        const csv = GM_DB.exportToCSV();
+        if (!csv) { alert('Aucune donnée à exporter.'); return; }
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `contact_requests_${new Date().toISOString().slice(0,10)}.csv`;
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
+    function escHtml(str) {
+        if (!str) return '';
+        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+    function escAttr(str) {
+        if (!str) return '';
+        return str.replace(/'/g, "\\'");
+    }
+</script>
+</body>
+</html>

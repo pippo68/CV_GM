@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giampaolo Marchioro | Chef de Cuisine & Pizzaiolo</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Portfolio professionnel de Giampaolo Marchioro, Chef de Cuisine et Pizzaiolo. Découvrez mon parcours de Versailles à la Suisse, mes compétences et mes créations culinaires.">
+    <meta name="keywords" content="Giampaolo Marchioro, Chef de cuisine, Pizzaiolo, Valais, Riddes, Sion, Montreux, Versailles, Restauration, Gastronomie, Traiteur, CV en ligne">
+    <meta name="author" content="Giampaolo Marchioro">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Giampaolo Marchioro | Chef de Cuisine & Pizzaiolo">
+    <meta property="og:description" content="Découvrez mon parcours professionnel, mes spécialités culinaires et ma galerie de réalisations.">
+    <meta property="og:image" content="doc/foto profilo 2.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Global Animated Background Slideshow -->
+    <div class="global-slideshow" id="global-slideshow">
+        <div class="hero-slide active" style="background-image: url('photo/foto per tema/restauration traditionnelle/20210803_124917.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('photo/foto per tema/catering/20210422_141240.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('photo/foto per tema/buffet/20221204_162213.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('photo/foto per tema/boulangerie e pâtisserie,pizza, produits levés/20200503_200810.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('photo/foto per tema/restauration traditionnelle/20200212_173517.jpg')"></div>
+    </div>
+    <div class="global-overlay"></div>
+
+    <!-- Header / Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="logo-gold">G</span>. Marchioro
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#accueil" data-i18n="nav-accueil">Accueil</a></li>
+                    <li><a href="#a-propos" data-i18n="nav-about">À Propos</a></li>
+                    <li><a href="#parcours" data-i18n="nav-parcours">Parcours</a></li>
+                    <li><a href="#competences" data-i18n="nav-competences">Compétences</a></li>
+                    <li><a href="#galerie" data-i18n="nav-galerie">Galerie</a></li>
+                    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="lang-selector">
+                <button class="btn-lang active" data-lang="fr">FR</button>
+                <button class="btn-lang" data-lang="it">IT</button>
+                <button class="btn-lang" data-lang="en">EN</button>
+                <button class="btn-lang" data-lang="de">DE</button>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Menu de navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle" data-i18n="hero-subtitle">Créativité • Rigueur • Passion</span>
+                <h1 class="hero-title">Giampaolo <span class="highlight">Marchioro</span></h1>
+                <p class="hero-tagline" data-i18n="hero-tagline">Chef de Cuisine & Pizzaiolo passionné, fort d'une riche expérience internationale et suisse. Spécialiste de la cuisine italienne, française, suisse et de la boulangerie artisanale.</p>
+                <div class="hero-buttons">
+                    <a href="#parcours" class="btn btn-primary" data-i18n="hero-btn-parcours">Mon Parcours</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero-btn-contact">Me Contacter</a>
+                </div>
+            </div>
+            <div class="hero-profile-container">
+                <div class="hero-profile-glow"></div>
+                <div class="hero-profile-image">
+                    <img src="doc/foto profilo 2.jpg" alt="Giampaolo Marchioro Portrait" id="profile-photo" class="profile-img-active">
+                    <img src="doc/foto profilo 1.jpg" alt="Giampaolo Marchioro Secondary" id="profile-photo-hover" class="profile-img-hover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="a-propos" class="about-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading" data-i18n="about-heading">Mon Histoire</span>
+                <h2 class="section-title" data-i18n="about-title">À Propos de Moi</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <h3 class="about-subtitle" data-i18n="about-subtitle">L'amour de la bonne table et de la transmission</h3>
+                    <p class="about-paragraph" data-i18n="about-p1">
+                        D'origine italienne et titulaire d'un diplôme de cuisine de la prestigieuse école <strong>I.P.S.A.R. 'Carlo Porta'</strong> de Milan, je place le goût, la qualité et le partage au centre de mon quotidien. Fort de plusieurs décennies d'expérience dans la restauration et l'hôtellerie, j'ai eu l'opportunité de travailler dans des cadres prestigieux comme la table du président au <strong>Château de Versailles</strong> pour le Groupe Elior, mais aussi dans des établissements de saison, des cuisines de collectivité (Compass Group) et des enseignes italiennes de renom.
+                    </p>
+                    <p class="about-paragraph" data-i18n="about-p2">
+                        Rigoureux, organisé et attentif aux coûts, j'aime mener et dynamiser des équipes tout en transmettant mon savoir-faire. Ma cuisine mêle tradition et technicité, alliant le respect des recettes classiques italiennes, françaises et suisses aux méthodes modernes comme la cuisson sous-vide à basse température.
+                    </p>
+                    
+                    <div class="personal-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                            <span class="detail-text" data-i18n="about-address-label">Rouelle de Lydesoz 5, 1913 Saillon (Valais)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </span>
+                            <span class="detail-text"><a href="mailto:giampaolo@marchioro.org">giampaolo@marchioro.org</a></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <span class="detail-text"><a href="tel:+41779483592">+41 (0) 77 948 35 92</a></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-extra-cards">
+                    <div class="about-card card-glass">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h4 data-i18n="about-social-title">Engagement Social</h4>
+                        <p data-i18n="about-social-desc">Membre actif des scouts valaisans et entraîneur pour un club de ski suisse en hiver. Passionné par l'animation socioculturelle de Riddes à travers la cuisine locale.</p>
+                    </div>
+                    
+                    <div class="about-card card-glass">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        </div>
+                        <h4 data-i18n="about-status-title">Disponibilité Stable</h4>
+                        <p data-i18n="about-status-desc">Actuellement en emploi, je recherche une collaboration à long terme dans un établissement dynamique où je pourrai apprendre, partager et faire briller mon équipe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="parcours" class="experience-section section-padding alternate-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading" data-i18n="timeline-heading">Mon Expérience</span>
+                <h2 class="section-title" data-i18n="timeline-title">Parcours Professionnel</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="timeline">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+                
+                <!-- Timeline Items -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">03/2025 – 03/2026</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-1">Responsable Remplacement du Personnel</h3>
+                                <h4 class="timeline-company">Restaurante St. Laurent – Riddes</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-stlaurent-desc">Gestion ponctuelle, remplacement opérationnel, maintien de la cadence et de la qualité en cuisine et pizzeria locale.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">06/2023 – 12/2024</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-2">Responsable Cuisine</h3>
+                                <h4 class="timeline-company">Tempo di Pasta / Restaurant Minestrone – Montreux</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-tempodipasta-desc">Direction des opérations de cuisine pour une enseigne spécialisée dans les pâtes fraîches et spécialités italiennes. Optimisation des recettes et satisfaction client.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">10/2022 – 04/2023</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-3">Chef de Cuisine (Missions Temporaires)</h3>
+                                <h4 class="timeline-company">Foyer Le Temps de Vivre – Mayen de Chamoson</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-tempsdevivre-desc">Responsable de l'élaboration des menus et de la gestion de la cuisine dans un établissement d'accueil. Adaptation des régimes et approvisionnements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">03/2022 – 08/2022</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-4">Responsable de la Cafétéria / Cuisinier</h3>
+                                <h4 class="timeline-company">CHVR Hôpital de Martigny – Martigny</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-hospital-desc">Gestion de l'espace cafétéria, accueil des usagers, préparation des plats froids/chauds et respect rigoureux des protocoles d'hygiène hospitalière.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">09/2020 – 12/2021</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-5">Chef de Cuisine</h3>
+                                <h4 class="timeline-company">Compass Group SA – Sion / Sierre</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-compass-desc">Gestion de 3 restaurants (dont le restaurant HES-SO). Direction des équipes, élaboration des menus selon des chartes internes strictes, planification d'événements et banquets, gestion financière via le logiciel SAP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">03/2017 – 06/2020</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-6">Chef de Poste</h3>
+                                <h4 class="timeline-company">Zenhäusern – Sion</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-zenhausern-desc">Ouverture d'un nouveau site de restauration. Recrutement, formation de l'équipe culinaire, gestion des plannings et des approvisionnements (budget annuel). Organisation du service événementiel traiteur au siège. Moyenne de 120 couverts/jour. Normes HACCP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">07/2015 – 11/2016</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-7">Traiteur (Saisonnier)</h3>
+                                <h4 class="timeline-company">Hôtel du Barrage – Hérémence</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-barrage-desc">Préparation de banquets, mariages et événements d'envergure. Cuisine traditionnelle suisse et française. Gestion de buffets chauds/froids. Moyenne de 200 couverts/jour.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">01/2012 – 12/2015</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-8">Chef de Cuisine</h3>
+                                <h4 class="timeline-company">Groupe Elior – Versailles (France)</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-elior-desc"><strong>Responsable de la "Table du Président" au Château de Versailles</strong>. Organisation de dîners haut de gamme pour des invités d'honneur (Jean-Jacques Aillagon). Élaboration des cartes de séminaires et banquets, gestion des stocks, gestion d'apprentis et utilisation de SAP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-glass timeline-accordion">
+                        <div class="timeline-header">
+                            <div class="timeline-header-text">
+                                <span class="timeline-date">06/2006 – 11/2012</span>
+                                <h3 class="timeline-role" data-i18n="timeline-role-9">Gérant de Restaurant</h3>
+                                <h4 class="timeline-company">Société Marchioro Sàrl</h4>
+                            </div>
+                            <span class="timeline-toggle-icon">&#9662;</span>
+                        </div>
+                        <div class="timeline-detail">
+                            <p class="timeline-desc" data-i18n="timeline-marchioro-desc">Direction complète de l'établissement familial. Gestion comptable, relation fournisseurs, élaboration de la carte et coordination en cuisine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section — Organic Design -->
+    <section id="competences" class="skills-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading" data-i18n="skills-heading">Mon Savoir-Faire</span>
+                <h2 class="section-title" data-i18n="skills-title">Compétences Professionnelles</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="skills-organic">
+                <!-- Art Culinaire -->
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18V6a4 4 0 0 1 8 0v12"/><path d="M18 18V9a4 4 0 0 0-8 0v9"/><path d="M3 18h18a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-culinary-it">Cuisine Italienne</h3>
+                    <p data-i18n="skills-culinary-it-desc">Traditionnelle &amp; Moderne</p>
+                </div>
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-culinary-bread">Boulangerie &amp; Pizze</h3>
+                    <p data-i18n="skills-culinary-bread-desc">Levains naturels &amp; Artisanal</p>
+                </div>
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-culinary-fr">Cuisine Française</h3>
+                    <p data-i18n="skills-culinary-fr-desc">Terroir Suisse &amp; Classique</p>
+                </div>
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-culinary-sousvide">Cuisson Sous-vide</h3>
+                    <p data-i18n="skills-culinary-sousvide-desc">Basse température</p>
+                </div>
+                <!-- Management -->
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-mgmt-team">Direction d'Équipe</h3>
+                    <p data-i18n="skills-mgmt-team-desc">Recrutement &amp; Formation</p>
+                </div>
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-mgmt-haccp">Normes HACCP</h3>
+                    <p data-i18n="skills-mgmt-haccp-desc">Hygiène &amp; Sécurité Alimentaire</p>
+                </div>
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-mgmt-fin">Gestion Financière</h3>
+                    <p data-i18n="skills-mgmt-fin-desc">SAP &amp; Adoria Pro</p>
+                </div>
+                <div class="skill-cloud-card">
+                    <div class="skill-cloud-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/></svg>
+                    </div>
+                    <h3 data-i18n="skills-mgmt-stock">Stocks &amp; Fournisseurs</h3>
+                    <p data-i18n="skills-mgmt-stock-desc">Approvisionnement &amp; Contrôle</p>
+                </div>
+            </div>
+
+            <!-- Certifications Panel -->
+            <div class="certifications-panel card-glass">
+                <h3 data-i18n="skills-cert-title">Diplômes &amp; Formations Continues</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <span class="cert-year">1986</span>
+                        <div class="cert-content">
+                            <h4 data-i18n="skills-cert-ipsar">Scuola I.P.S.A.R. 'Carlo Porta'</h4>
+                            <p data-i18n="skills-cert-ipsar-desc">Diploma in Cuoco Tecnologo (équivalence CFC Cuisine en Suisse)</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-year">2005</span>
+                        <div class="cert-content">
+                            <h4 data-i18n="skills-cert-bread">Formation Spécialisée</h4>
+                            <p data-i18n="skills-cert-bread-desc">Boulangerie et pâtes levées</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <span class="cert-year">2009</span>
+                        <div class="cert-content">
+                            <h4 data-i18n="skills-cert-sousvide">Formation Continue</h4>
+                            <p data-i18n="skills-cert-sousvide-desc">Techniques de cuisson sous-vide et à basse température</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Competences Section -->
+    <section id="competences-extra" class="extra-skills-section section-padding alternate-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading" data-i18n="extra-heading">Spécialisations</span>
+                <h2 class="section-title" data-i18n="extra-title">Compétences Complémentaires</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle" data-i18n="extra-desc">Au-delà de la cuisine traditionnelle, je possède des savoir-faire spécialisés acquis au fil de mes expériences professionnelles variées.</p>
+            </div>
+            
+            <div class="extra-skills-grid">
+                <!-- Boucher -->
+                <div class="extra-skill-card card-glass">
+                    <div class="extra-skill-icon">
+                        <!-- Butcher knife / cleaver icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3 L21 3 L21 8 Q21 12 17 12 L7 12 L7 10 Q11 10 13 8 Z"/><line x1="7" y1="12" x2="3" y2="21"/><line x1="7" y1="10" x2="3" y2="19"/></svg>
+                    </div>
+                    <h3 data-i18n="extra-boucher-title">Boucher</h3>
+                    <p class="extra-skill-desc" data-i18n="extra-boucher-desc">Maîtrise des techniques de découpe et de transformation de la viande : désossage, parage, ficelage et préparation de pièces bouchères (bœuf, veau, agneau, porc, volaille). Connaissance approfondie de l'anatomie animale, respect strict de la chaîne du froid et des normes HACCP. Capacité à optimiser le rendement des carcasses et à élaborer des spécialités traiteur.</p>
+                    <div class="extra-skill-tags">
+                        <span data-i18n="extra-tag-desossage">Désossage</span>
+                        <span data-i18n="extra-tag-parage">Parage</span>
+                        <span data-i18n="extra-tag-decoupe-fr">Découpe française</span>
+                        <span data-i18n="extra-tag-rendement">Rendement carcasse</span>
+                    </div>
+                </div>
+
+                <!-- Poissonnier -->
+                <div class="extra-skill-card card-glass">
+                    <div class="extra-skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.46-3.44 6-7 6-3.56 0-7.56-2.54-8.5-6z"/><path d="M2 10s2-2 3-2 2.5 2 2.5 2"/><path d="M2 14s2 2 3 2 2.5-2 2.5-2"/><circle cx="17" cy="12" r="1"/></svg>
+                    </div>
+                    <h3 data-i18n="extra-poissonnier-title">Poissonnier</h3>
+                    <p class="extra-skill-desc" data-i18n="extra-poissonnier-desc">Expertise dans la préparation des produits de la mer : écaillage, éviscération, levage de filets, découpe en portions et dressage de plateaux de fruits de mer. Évaluation rigoureuse de la fraîcheur, maîtrise des cuissons spécifiques (pochage, grillade, vapeur) et gestion de la traçabilité. Aptitude à travailler des produits fragiles avec précision et rapidité.</p>
+                    <div class="extra-skill-tags">
+                        <span data-i18n="extra-tag-filetage">Filetage</span>
+                        <span data-i18n="extra-tag-fruits-mer">Fruits de mer</span>
+                        <span data-i18n="extra-tag-fraicheur">Évaluation fraîcheur</span>
+                        <span data-i18n="extra-tag-cuissons-spec">Cuissons spécifiques</span>
+                    </div>
+                </div>
+
+                <!-- Cuisine Casher -->
+                <div class="extra-skill-card card-glass">
+                    <div class="extra-skill-icon">
+                        <!-- Menorah (candelabra) — 7 candles symbol of Jewish tradition -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="21" x2="12" y2="8"/><path d="M5 8 Q5 4 12 4 Q19 4 19 8"/><line x1="5" y1="8" x2="5" y2="12"/><line x1="8" y1="6" x2="8" y2="10"/><line x1="16" y1="6" x2="16" y2="10"/><line x1="19" y1="8" x2="19" y2="12"/><line x1="4" y1="21" x2="20" y2="21"/><circle cx="5" cy="11.5" r="0.7" fill="currentColor" stroke="none"/><circle cx="8" cy="9.5" r="0.7" fill="currentColor" stroke="none"/><circle cx="12" cy="7.5" r="0.7" fill="currentColor" stroke="none"/><circle cx="16" cy="9.5" r="0.7" fill="currentColor" stroke="none"/><circle cx="19" cy="11.5" r="0.7" fill="currentColor" stroke="none"/></svg>
+                    </div>
+                    <h3 data-i18n="extra-casher-title">Cuisine Casher</h3>
+                    <p class="extra-skill-desc" data-i18n="extra-casher-desc">Connaissance approfondie des règles de la cacheroute : séparation stricte viande (basari) et laitier (halavi), gestion d'espaces et ustensiles dédiés, approvisionnement en produits certifiés casher. Maîtrise des techniques de substitution (alternatives végétales) tout en préservant la qualité gastronomique. Collaboration avec le mashguiach pour la conformité rituelle.</p>
+                    <div class="extra-skill-tags">
+                        <span data-i18n="extra-tag-cacheroute">Cacheroute</span>
+                        <span data-i18n="extra-tag-separation">Séparation viande/lait</span>
+                        <span data-i18n="extra-tag-certifies">Produits certifiés</span>
+                        <span data-i18n="extra-tag-substitutions">Substitutions créatives</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section — Organisée par Thème -->
+    <section id="galerie" class="gallery-section section-padding alternate-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading" data-i18n="gallery-heading">Portfolio Culinaire</span>
+                <h2 class="section-title" data-i18n="gallery-title">Mes Spécialités en Images</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle" data-i18n="gallery-desc">Explorez mes réalisations organisées par spécialité. Chaque thème reflète un domaine de compétence construit au fil de mes expériences professionnelles.</p>
+            </div>
+
+            <!-- Theme Navigation Tabs -->
+            <nav class="theme-nav" id="theme-nav" aria-label="Navigation par thème">
+                <!-- Populated by JavaScript -->
+            </nav>
+
+            <!-- Theme Gallery Sections — Populated by JavaScript -->
+            <div id="themes-container"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading" data-i18n="contact-heading">Me Joindre</span>
+                <h2 class="section-title" data-i18n="contact-title">Prendre Contact</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info-panel card-glass">
+                    <h3 data-i18n="contact-form-title">Discutons de votre projet</h3>
+                    <p data-i18n="contact-p">À la recherche d'un chef de cuisine rigoureux et passionné pour renforcer votre établissement ? Envoyez-moi un message ou demandez mes justificatifs (diplômes, certificats) directement via le formulaire ci-contre.</p>
+                    
+                    <div class="contact-details-list">
+                        <a href="mailto:giampaolo@marchioro.org" class="contact-card">
+                            <span class="card-icon-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </span>
+                            <div>
+                                <h5>Email</h5>
+                                <p>giampaolo@marchioro.org</p>
+                            </div>
+                        </a>
+                        <a href="tel:+41779483592" class="contact-card">
+                            <span class="card-icon-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </span>
+                            <div>
+                                <h5>Téléphone</h5>
+                                <p>+41 (0) 77 948 35 92</p>
+                            </div>
+                        </a>
+                        <div class="contact-card">
+                            <span class="card-icon-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </span>
+                            <div>
+                                <h5 data-i18n="nav-contact">Adresse</h5>
+                                <p data-i18n="about-address-label">Rouelle de Lydesoz 5, 1913 Saillon (Suisse)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-panel card-glass">
+                    <form id="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact-label-name">Nom Complet</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom et prénom" data-i18n-placeholder="placeholder-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact-label-email">Adresse E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com" data-i18n-placeholder="placeholder-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact-label-subject">Objet</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Sujet de votre message" data-i18n-placeholder="placeholder-subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact-label-message">Message</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Écrivez votre message ici..." data-i18n-placeholder="placeholder-message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-group-title" data-i18n="contact-label-docs">Demander des documents (Facultatif)</label>
+                            <div class="document-checkboxes-grid">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="documents" value="Curriculum Vitae">
+                                    <span class="checkbox-checkmark"></span>
+                                    <span data-i18n="contact-doc-cv">Curriculum Vitae</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="documents" value="Lettre de Motivation">
+                                    <span class="checkbox-checkmark"></span>
+                                    <span data-i18n="contact-doc-lm">Lettre de Motivation</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="documents" value="Certificats de travail (Suisse)">
+                                    <span class="checkbox-checkmark"></span>
+                                    <span data-i18n="contact-doc-certs">Certificats de travail (Suisse)</span>
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="documents" value="Diplôme Cuisinier Carlo Porta">
+                                    <span class="checkbox-checkmark"></span>
+                                    <span data-i18n="contact-doc-diploma">Diplôme Cuisinier (Carlo Porta)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="contact-btn-submit">Envoyer le message</button>
+                    </form>
+                    <div id="form-feedback" class="form-feedback hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev" aria-label="Photo précédente">&#10094;</button>
+        <button class="lightbox-next" aria-label="Photo suivante">&#10095;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Fullscreen image">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p data-i18n="footer-text1">&copy; 2026 Giampaolo Marchioro. Tous droits réservés.</p>
+            <p data-i18n="footer-text2">Conçu pour présenter mes compétences et ma passion pour la restauration.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="photo-list.js"></script>
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

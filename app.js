@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CONTACT FORM HANDLER (with DB + Automated Formspree / Mailto fallback) ---
     // CONFIGURATION: If you want automatic email delivery without opening the user's email client,
     // create a free form at https://formspree.io/ and paste your Form ID here (e.g. "xvoejkyz")
-    const FORMSPREE_ID = ""; 
+    const FORMSPREE_ID = "xlgqjvpw"; 
 
     const contactForm = document.getElementById('contact-form');
     const formFeedback = document.getElementById('form-feedback');
